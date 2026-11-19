@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisar Ahmad - Portfolio Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI' 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: #1e293b;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 850px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto 25px auto;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .left-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #10b981;
+            flex-shrink: 0;
+        }
+
+        .intro-text h1 {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .intro-text p {
+            font-size: 0.95rem;
+            color: #10b981;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-status, .btn-custom, .btn-contact {
+            background: #2563eb;
+            color: black;
+            border: 1px solid #475569;
+        }
+
+        .btn-status:hover, .btn-custom:hover, .btn-contact:hover {
+            background-color: #10b981;
+            transform: translateY(-2px);
+        }
+
+        .display-box {
+            background: #0f172a;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            display: none;
+            animation: fadeIn 0.5s ease;
+            margin-top: 10px;
+        }
+
+        .code-box {
+            font-family: 'Courier New',  Courier, monospace;
+            color: blue;
+            border-left-color: #38bdf8;
+        }
+
+        .rigth-pic-container {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .rigth-pic {
+            width: 220px;
+            height: 100%;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid #475569;
+        }
+
+        .fiverr-text {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #10b981;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            form { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .project-card {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 850px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+            text-align: center;
+            }
+
+            .project-card h2 {
+                margin-bottom: 15px;
+                font-size: 1.4rem;
+                color: #fff;
+            }
+
+            .project-card video {
+                width: 100%;
+                height: auto;
+                max-width: 450px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                background: #000;
+            }
+
+                .btn-preview,
+                .btn-code {
+                    background-color: blue;
+                    color: black;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    margin: 5px;
+                    transition: background-color 0.3s ease;
+                }
+
+                .btn-preview:hover,
+                .btn-code:hover {
+                    background-color: #10b981;
+                }
+
+                footer {
+                    text-align: center;
+                    margin-top: 30px;
+                    color: #94a3b8;
+                    font-size: 0.95rem;
+                    padding-bottom: 20px;
+                }
+
+                @media(max-width:768px) {
+                    .profile-card { 
+                        flex-direction: column;
+                        padding: 20px;
+                        text-align: center;
+                    }
+                    .profile-header{
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .rigth-pic-container{
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                    .rigth-pic{
+                        width: 180px;
+                    }
+                    .btn-container {
+                        justify-content: center;
+                    }
+            }
+
+            @media(max-width: 480px) {
+                body {
+                    padding: 8px;
+                }
+                .profile-card {
+                    padding: 15px;
+                    border-radius: 12px;
+                }
+                .intro-text h1 {
+                    font-size: 1.2rem;
+                }
+                .intro-text p {
+                    font-size: 0.85rem;
+                }
+                .left-pic {
+                    width: 65px;
+                    height: 65px;
+                }
+                .rigth-pic {
+                    width: 140px;
+                }
+                .btn-container {
+                    flex-direction: column;
+                    width: 100%;
+                }
+                .btn {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 0.85rem;
+                }
+                .profile-card {
+                    padding: 15px 10px;
+                    margin: 15px 0;
+                }
+                .profile-card h2 {
+                    font-size: 1.1rem;
+                }
+                .btn-preview, .btn-code {
+                    width: 100%;
+                    display: block;
+                    margin: 5px 0;
+                }
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+                padding: 20px 10px;
+                color: #94a3b8;
+                font-size: 0.95rem;
+            }
+
+            .footer-social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-bottom: 18px;
+            }
+
+            .social-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 9px 16px;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 0.9rem;
+                font-weight: 600;
+                transition: transform 0.3s ease;
+            }
+
+            .social-btn:hover {
+                transform: translateY(-3px);
+                opacity: 0.9;
+            }
+
+            .facebook { background-color: #1877F2; }
+            .whatsapp { background-color: #25D366; }
+            .youtube { background-color: #FF0000; }
+            .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            }
+
+            @media (max-width: 480px) {
+                .footer-social {
+                    gap: 8px;
+                }
+                .social-btn {
+                    flex:  1 1 44%;
+                    justify-content: center;
+                    font-size: 0.85rem;
+                    padding: 9px 10px;
+                }
+            }
+
+        </style>
+</head>
+<body>
+
+    <div class="profile-card">
+
+        <div class="left-content">
+            <div class="profile-header">
+            <img src="images/20260706_154201.jpg" alt="Nisar Ahmad Avatar" class="left-pic">
+
+            <div class="intro-text">
+                <h1>Nisar Ahmad</h1>
+                <p>HTML.CSS.JavaScript Building Modern & Responsive Websites
+                </p>
+            </div>
+        </div>
+
+
+        <div class="btn-container">
+            <button class="btn btn-status" onclick="showStatus()">Check Status</button>
+            <button class="btn btn-custom" onclick="showCustomCode()">Custom Code</button>
+            <button class="btn btn-contact" onclick="showContact()">Contact Us</button>
+        </div>
+
+        <div id="statusBox" class="display-box"></div>
+
+        <div id="codeBox" class="display-box code-Box"></div>
+
+        <div id="contactBox" class="display-box"></div>
+    </div>
+
+    <div class="rigth-pic-container">
+        <img src="images/nisar.png" alt="NIsar Ahmad Profile" class="rigth-pic">
+        <p class="fiverr-text">Active On Fiverr</p>
+    </div>
+    </div>
+
+        <div class="project-card">
+            <h2>YOHA Industries Limited</h2>
+            <video width="100%" controls>
+                <source src="videos/yil.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="project-card">
+            <h2>Perfect Medical Center Website</h2>
+            <video width="100%" controls>
+                <source src="videos/perfectme.mp4" type="video/mp4">
+                Your browser does not support the video tage.
+            </video>
+        </div>
+
+
+        <div class="project-card">
+            <h2>Classic Meat Shop </h2>
+            <video width="100%" controls>
+                <source src="videos/crm.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="project-card">
+            <h2>Fast Real Estate Network</h2>
+            <video width="100%" controls>
+                <source src="videos/fren.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        
+        <button class="btn-preview" onclick="livePreview()">Live Preview</button>
+        <button class="btn-code" onclick="sourceCode()">Source Code</button>
+
+        <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/share/19ch4mSfYY/" target="_blank" class="social-btn facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://wa.me/923442344784" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsaap"></i> WhatsApp
+            </a>
+            <a href="https://www.youtube.com/@Nisarkhan-v6d5f" target="_blank" class="social-btn youtube" aria-label="YouTube">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a href="https://www.instagram.com/nisar89826" target="_blank" class="social-btn instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+
+            <p>&copy; 2026 Nisar Ahmad Portfolio | Designed & Developed by Nisar Ahmad</p>
+        </footer>
+
+<script>
+    function showStatus() {
+        const statusBox = document.getElementById('statusBox');
+        const codeBox = document.getElementById('codeBox');
+
+        codeBox.style.display = 'none';
+        if (statusBox.style.display === "block") {
+            statusBox.style.display = "none";
+            } else { 
+
+        statusBox.innerHTML = "<strong>Message:</strong> Welcome Nisar Ahmad, Available for Freelance Project Professional Front-End Web Developer Feel free to contact me.";
+         statusBox.style.display = 'block';
+    }
+}
+    
+    function showCustomCode() {
+        const statusBox = document.getElementById('statusBox');
+        const codeBox = document.getElementById('codeBox');
+
+        statusBox.style.display = 'none';
+        if (codeBox.style.display === "block") {
+            codeBox.style.display = "none";
+        } else {
+
+        codeBox.innerHTML = `
+        <strong>Skills & Services:<strong><br>
+        . HTML5 (Semantic Structure)<br>
+        . CSS3 (Responsive Design & Animations)<br>
+        . JavaScript (Dynamic Web Apps & Logic)
+        `;
+
+        codeBox.style.display = 'block';
+    }
+}
+    function showContact () {
+        const contactBox = document.getElementById("contactBox");
+
+        if (contactBox.style.display === "block") {
+            contactBox.style.display = "none";
+        } else {
+
+            contactBox.innerHTML = `
+          <strong>Contact Us</strong><br><br>
+          Email: nisarkhan89904546@gmail.com<br>
+          Available for Freelance Projects
+          `;
+        
+          contactBox.style.display = "block";
+        }
+    }
+
+    function livePreview() {
+        alert("Live Website Preview");
+
+    }
+
+    function sourceCode() {
+        alert("Source Code Available");
+    }
+
+</script>
+</body>
+</html>                                
